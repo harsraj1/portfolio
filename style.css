@@ -1,0 +1,391 @@
+/* Custom CSS */
+
+/* Variables */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --light-color: #bfc2ea;
+    --dark-color: #343a40;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--dark-color);
+    
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbarScroll {
+    background-color: var(--light-color);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.nav-link {
+    color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    width: 28px;
+    height: 2px;
+    background-color: var(--secondary-color);
+    display: block;
+    position: relative;
+}
+
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: "";
+    width: 28px;
+    height: 2px;
+    background-color: var(--secondary-color);
+    display: block;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-toggler-icon::before {
+    top: -10px;
+}
+
+.navbar-toggler-icon::after {
+    bottom: -10px;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    bottom: 0;
+}
+
+/* Hero Styles */
+.hero {
+    margin-top: 62px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(#2c16e4,black);
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--light-color);
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    color: var(--light-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+}
+
+/* About Styles */
+.about {
+    color: aqua;
+    background-image: linear-gradient(black,#2c16e4);
+    padding: 4rem 0;
+}
+
+.about-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.about-text {
+    margin-bottom: 2rem;
+}
+
+.about-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
+
+.info-item i {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+/* Services Styles */
+.services {
+    padding: 4rem 0;
+    background-color: var(--light-color);
+}
+
+.services-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.services-subtitle {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.service-item {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.service-item i {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.service-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Portfolio Styles */
+.portfolio {
+    background-color: antiquewhite;
+    padding: 4rem 0;
+}
+
+.portfolio-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.portfolio-subtitle {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--light-color);
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-desc {
+    color: var(--light-color);
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+/* Contact Styles */
+.contact {
+    background-color: aliceblue;
+    padding: 4rem 0;
+}
+
+.contact-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.contact-subtitle {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact-form {
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+}
+
+/* Footer Styles */
+.footer {
+    padding: 1rem 0;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    text-align: center;
+}
+
+.footer p {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: larger;
+}
+
+.footer a {
+    
+    font-size: larger;
+}
+
+.footer a i:hover {
+    color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 80vh;
+    }
+
+    .hero-title {
+        font-size: 24px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .about-info {
+        justify-content: center;
+    }
+
+    .info-item {
+        margin-right: 0;
+    }
+}
+
