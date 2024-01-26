@@ -251,9 +251,24 @@ img {
     text-align: center;
 }
 
+.row {
+    justify-content: center;
+}
+
+.card {
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border: none;
+}
+
 .portfolio-item {
     position: relative;
     overflow: hidden;
+    height: 100%;
+}
+
+.img-fluid {
+    height: 100%;
 }
 
 .portfolio-overlay {
@@ -285,6 +300,8 @@ img {
 .portfolio-desc {
     color: var(--light-color);
     margin-bottom: 1rem;
+    padding: 0 1rem;
+    text-align: center;
 }
 
 
